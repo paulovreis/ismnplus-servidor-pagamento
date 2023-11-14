@@ -11,18 +11,6 @@ public class Tarefa extends Thread {
         this.conexao = conexao;
     }
 
-    // public void setInformation(StringBuilder info) throws Exception {
-    // if (info == null)
-    // throw new Exception("Objeto nulo");
-    // if (info.equals(""))
-    // throw new Exception("String vazia!");
-    // this.info = info;
-    // }
-
-    // public StringBuilder getInformation() {
-    // return this.info;
-    // }
-
     public void morra() {
         this.fim = true;
     }
