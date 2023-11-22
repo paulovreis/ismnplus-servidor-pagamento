@@ -54,6 +54,7 @@ public class ServletHandler {
 
             receptor.close();
             transmissor.close();
+            clientSocket.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
