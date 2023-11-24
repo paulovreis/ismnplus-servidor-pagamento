@@ -10,20 +10,22 @@ public class Servidor {
             AceitadoraDeConexao aConexao = new AceitadoraDeConexao(host);
             aConexao.start();
 
+            Teclado teclado = new Teclado();
             for(;;){
-                Teclado teclado = new Teclado();
                 System.out.println("Caso dejese finalizar o servidor digite 'fim'");
                 String resp = teclado.readString().toLowerCase();
                 if(resp.equals("fim")){
                     aConexao.morra();
-                    host.close();
                     System.out.println("\n\nSERVIDOR FINALIZADO");
+                    host.close();
                     System.exit(0);
+                }else{
+                    continue;
                 }
             }
 
         } catch (Exception erro) {
-            System.err.println(erro.getMessage() + "Classe servidor");
+            System.err.println(erro.getMessage() + " - Classe servidor");
         }
     }
 }

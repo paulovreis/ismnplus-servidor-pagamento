@@ -9,7 +9,6 @@ public class Teclado {
         String s = teclado.readLine();
         if(s == null)
             throw new Exception("String nula");
-        teclado.close();
         return s;
     }
 }

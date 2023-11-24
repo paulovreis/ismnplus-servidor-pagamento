@@ -31,7 +31,7 @@ public class Tarefa extends Thread {
                 conexao.close();
                 System.out.println("pagamento finalizado!");
             } catch (Exception e) {
-                System.err.print(e.getMessage() + "Classe tarefa");
+                System.err.print(e.getMessage() + " - Classe tarefa");
             }
     }
 }
