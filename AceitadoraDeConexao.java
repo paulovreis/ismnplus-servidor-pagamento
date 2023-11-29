@@ -24,8 +24,9 @@ public class AceitadoraDeConexao extends Thread{
                 Tarefa thread = new Tarefa(conexao);
                 thread.start();
             }
+            host.close();
         }catch(Exception e){
-            System.err.println(e.getMessage() + "Classe AceitadoraDeConexao");
+            System.err.println(e.getMessage() + " - Classe AceitadoraDeConexao");
         }
     }
 }
